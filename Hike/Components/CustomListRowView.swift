@@ -23,11 +23,13 @@ struct CustomListRowView: View {
                 Text(rowContent!)
                     .foregroundColor(.primary)
                     .fontWeight(.semibold)
-                    .font(.body)
+                    .font(.subheadline)
             } else if rowLabelLink != nil && rowLinkDestination != nil {
                 Link(rowLabelLink!, destination: URL(string: rowLinkDestination!)!)
                     .foregroundColor(.pink)
-                    .fontWeight(.heavy)
+                    .fontWeight(.bold)
+                    .font(.subheadline)
+
             } else {
                 /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
             }
@@ -44,6 +46,7 @@ struct CustomListRowView: View {
                 }
 
                 Text(rowLabel)
+                    .font(.subheadline)
             }
         }
     }
